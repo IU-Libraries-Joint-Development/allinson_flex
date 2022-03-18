@@ -6,16 +6,16 @@ ensure
   Webpacker.logger = old_logger
 end
 
-namespace :yarn do
-  task :install do
-    Dir.chdir(File.join(__dir__, "../..")) do
-      ensure_log_goes_to_stdout do
-        Webpacker.logger.info 'starting flexible metadata yarn install'
-        system "yarn install --no-progress --production"
-      end
-    end
-  end
-end
+# namespace :yarn do
+#   task :install do
+#     Dir.chdir(File.join(__dir__, "../..")) do
+#       ensure_log_goes_to_stdout do
+#         Webpacker.logger.info 'starting flexible metadata yarn install'
+#         system "yarn install --no-progress --production"
+#       end
+#     end
+#   end
+# end
 
 namespace :allinson_flex do
   namespace :webpacker do
