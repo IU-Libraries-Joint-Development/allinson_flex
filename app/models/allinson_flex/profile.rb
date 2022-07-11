@@ -14,7 +14,8 @@ module AllinsonFlex
     has_many :profile_contexts, dependent: :destroy
     accepts_nested_attributes_for :profile_contexts, allow_destroy: true
 
-    has_many :properties, class_name: 'AllinsonFlex::ProfileProperty', dependent: :destroy
+    has_many :properties, -> { includes(:texts) },
+             class_name: 'AllinsonFlex::ProfileProperty', dependent: :destroy
     accepts_nested_attributes_for :properties, allow_destroy: true
 
     paginates_per 20
