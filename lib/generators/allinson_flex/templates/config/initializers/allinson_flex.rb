@@ -10,7 +10,5 @@ AllinsonFlex.setup do |config|
   # Default:
   #
   # config.m3_schema_version_tag = 'f753864727a0ba743cb5ec47e88797435a0a596a'
-
-  # config.yaml_coder_permitted_classes = [ActiveSupport::HashWithIndifferentAccess, Symbol]
 end
 Hyrax::CurationConcern.actor_factory.insert_before Hyrax::Actors::ModelActor, AllinsonFlex::DynamicSchemaActor

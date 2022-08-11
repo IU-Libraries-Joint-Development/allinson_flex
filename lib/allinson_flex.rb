@@ -8,12 +8,10 @@ module AllinsonFlex
 
   class << self
     mattr_accessor  :m3_schema_repository_raw,
-                    :m3_schema_version_tag,
-                    :yaml_coder_permitted_classes
+                    :m3_schema_version_tag
 
     self.m3_schema_repository_raw = 'https://raw.githubusercontent.com/samvera-labs/houndstooth'
     self.m3_schema_version_tag = 'f753864727a0ba743cb5ec47e88797435a0a596a'
-    self.yaml_coder_permitted_classes = [ActiveSupport::HashWithIndifferentAccess, Symbol]
 
     def webpacker
       @webpacker ||= ::Webpacker::Instance.new(

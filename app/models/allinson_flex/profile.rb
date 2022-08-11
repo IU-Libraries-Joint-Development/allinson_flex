@@ -20,7 +20,7 @@ module AllinsonFlex
     paginates_per 20
 
     # serlializations
-    serialize :profile, AllinsonFlex::YamlCoder
+    serialize :profile
     # validations
     # validates :name, :profile_version, :responsibility, presence: true
     validates :profile, presence: true
