@@ -11,3 +11,7 @@
 node_modules/*
 yarn-error.log
 .idea
+
+# Lock files
+Gemfile.lock
+yarn.lock
